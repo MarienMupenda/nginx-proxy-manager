@@ -9,5 +9,10 @@ services:
       - '81:81'
       - '443:443'
     volumes:
-      - ./data:/data
-      - ./letsencrypt:/etc/letsencrypt
+      - pxm-data:/data
+      - pxm-letsencrypt:/etc/letsencrypt
+volumes:
+    pxm-data:
+      driver: local
+    pxm-letsencrypt:
+      driver: local
